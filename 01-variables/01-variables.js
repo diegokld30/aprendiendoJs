@@ -9,6 +9,7 @@ let boleano = false
 let indefinido = undefined;
 let nulo = null
 let nuevaVar = 2;
+const constanteValue = "Hola Valor";
 
 console.log(typeof(number));
 //REFERENCIA
@@ -20,7 +21,7 @@ console.log(typeof(number));
  * Class -> Clase            *
  */
 
-console.log(perro);
+console.log(gato);
 // console.log("variable1",var1);
 // console.log("variable2",var2);
 
