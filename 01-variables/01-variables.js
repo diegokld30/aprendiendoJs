@@ -8,6 +8,7 @@ let String = "hola frase del mundo"
 let boleano = false
 let indefinido = undefined;
 let nulo = null
+let nuevaVar = 2;
 
 console.log(typeof(number));
 //REFERENCIA
