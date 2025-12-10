@@ -1,0 +1,94 @@
+/* ===== RESETEO BÁSICO ===== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Centrar la calculadora con FLEX */
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  background: #f3f3f3;
+  min-height: 100vh;
+}
+
+.page {
+  min-height: 100vh;
+  display: flex;               
+  justify-content: center;
+  align-items: center;
+}
+
+/* Contenedor de la calculadora */
+.calculator {
+  background: #111;
+  padding: 16px;
+  border-radius: 16px;
+  width: 280px;
+  display: flex;               
+  flex-direction: column;
+  gap: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* Display */
+.calculator-display {
+  width: 100%;
+  border: none;
+  background: #000;
+  color: #fff;
+  font-size: 2rem;
+  text-align: right;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+/* GRID para los botones */
+.calculator-buttons {
+  display: grid;              
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+}
+
+/* Botón base */
+.btn {
+  border: none;
+  border-radius: 999px;
+  padding: 12px 0;
+  font-size: 1.2rem;
+  cursor: pointer;
+  background: #333;
+  color: #fff;
+  transition: transform 0.07s ease, filter 0.07s ease;
+}
+
+/* Al presionar */
+.btn:active {
+  transform: scale(0.95);
+  filter: brightness(1.2);
+}
+
+/* Botones especiales */
+.btn-gray {
+  background: #a5a5a5;
+  color: #000;
+}
+
+.btn-orange {
+  background: #ff9500;
+  color: #fff;
+}
+
+/* Botón 0 ocupando 2 columnas en el GRID */
+.btn-zero {
+  grid-column: span 2;
+}
+
+/* Responsive pequeño */
+@media (max-width: 400px) {
+  .calculator {
+    width: 90%;
+  }
+}
